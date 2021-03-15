@@ -17,5 +17,7 @@
 const Route = use("Route");
 
 Route.on("/").render("home");
-Route.get("/test", () => "hello World");
-Route.get("/test/:id", ({ params }) => `this is test id: ${params.id}`);
+
+Route.get("/posts", "PostController.index");
+// Route.get("/test", () => "hello World");
+// Route.get("/test/:id", ({ params }) => `this is test id: ${params.id}`);
