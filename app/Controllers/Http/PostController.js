@@ -2,8 +2,10 @@
 
 class PostController {
   //index method
-  async index() {
-    return " Posts";
+  async index({ view }) {
+    return view.render("posts/index", {
+      title: "latest Posts",
+    });
   }
 }
 
