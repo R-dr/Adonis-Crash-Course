@@ -1,9 +1,13 @@
+@layout('main')
+@section('content')
 <h1>{{title}}</h1>
 <ul>
 
   @each(post in posts)
-  <li><h3>{{post.title}}<h3>
+  <li>
+    <h3>{{post.title}}<h3>
     <p>{{post.body}}<p>
   </li>
   @endeach
 </ul>
+@endsection
